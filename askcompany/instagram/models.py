@@ -8,6 +8,9 @@ class Post(models.Model) :
     created_at = models.DateField(auto_now = True)
     updated_at = models.DateTimeField(auto_now = True)
 
+    class Meta : 
+        ordering = ['id']
+
     def __str__(self) -> str : 
         return self.message
 
