@@ -7,6 +7,8 @@ authors = ["Changmin Lee <ckdals8073@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 Pillow = "^9.0.0"
+Django = "~=3.0.0"
+django-debug-toolbar = "^3.2.4"
 
 [tool.poetry.dev-dependencies]
 
