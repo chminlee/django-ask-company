@@ -21,7 +21,12 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('instagram/', include('instagram.urls'))
-]
+] 
 
 if settings.DEBUG : 
     urlpatterns += static(settings.MEDIA_URL, dicument_root=settings.MEDIA_ROOT)
+
+    import debug_toolbar
+    urlpatterns += [
+        path('__debug__/', include(debug_toolbar.urls))
+    ]
