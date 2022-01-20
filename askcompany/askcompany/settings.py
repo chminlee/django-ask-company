@@ -133,3 +133,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # 저장
 INTERNAL_IPS = [
     "127.0.0.1"
 ]
+
+AUTH_USER_MODEL = 'auth.User' # instagram 앱 안에 User 모델을 만들었다면 이런 식으로 등록해줘야함, default 값은 auth.User
