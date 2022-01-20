@@ -20,7 +20,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('instagram/', include('instagram.urls'))
+    path('instagram/', include('instagram.urls')),
+    path('accounts/ ', include('accounts.urls')),
 ] 
 
 if settings.DEBUG : 

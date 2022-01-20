@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django_extensions',
     'debug_toolbar',
     # locals apps
-    'instagram'
+    'instagram',
+    'accounts',
 ]
 
 MIDDLEWARE = [
