@@ -9,6 +9,7 @@ class Post(models.Model) :
     is_public = models.BooleanField(default=False, verbose_name='공개여부')
     created_at = models.DateField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
+    tag_set = models.ManyToManyField(to = "Tag", blank=True)
 
     class Meta : 
         ordering = ['id']
@@ -26,3 +27,9 @@ class Comment(models.Model) :
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+class Tag(models.Model) : 
+    name = models.CharField(max_length=60, unique=True)
+
+    def __str__(self) : 
+        return self.name
